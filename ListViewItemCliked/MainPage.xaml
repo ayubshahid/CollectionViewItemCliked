@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:local="clr-namespace:ListViewItemCliked"
+             mc:Ignorable="d"
+             x:Class="ListViewItemCliked.MainPage">
+
+    <StackLayout>
+        <Label Text="{Binding AlertMessage}"/>
+        <local:BetterListView ItemsSource="{Binding ListSource}" ItemClickCommand="{Binding ItemClickCommand}"/>
+
+        <!--<CollectionView ItemsSource="{Binding ListSource}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="10"/>
+                        </Grid.ColumnDefinitions>
+
+                        <ImageButton Source="baseline_volume_off_black_18.png" 
+                                             Grid.Column="4" 
+                                             BackgroundColor="Transparent"
+                                             HorizontalOptions="Center"
+                                             VerticalOptions="Center"
+                                             Command="{Binding ItemClickCommand}"
+                                     Clicked="ImageButton_Clicked">
+                            <ImageButton.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1"/>
+                            </ImageButton.GestureRecognizers>
+                        </ImageButton>
+                  
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>-->
+    </StackLayout>
+
+</ContentPage>
